@@ -37,7 +37,7 @@ This is a quick overview of the "flow" I recommend. More detail below. Even if y
 1. **BACKEND:** Uses `userId` to get Stripe `customerId` from KV
 1. **BACKEND:** Calls `syncStripeSubscription` with `customerId`
 1. **FRONTEND:** After sync succeeds, redirects user to wherever you want them to be :)
-1. **BACKEND:** On [_all relevant events_](#allowedEvents), calls `syncStripeSubscription` with `customerId`
+1. **BACKEND:** On [_all relevant events_](#allowedevent), calls `syncStripeSubscription` with `customerId`
 
 This might seem like a lot. That's because it is. But it's also the simplest Stripe setup I've ever seen work.
 
