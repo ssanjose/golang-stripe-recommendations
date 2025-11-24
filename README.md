@@ -33,7 +33,7 @@ This is a quick overview of the "flow" I recommend. More detail below. Even if y
 1. **BACKEND:** Create a "checkout session" for the user
    - With the return URL set to a dedicated `/success` route in your app
 1. **USER:** Makes payment, subscribes, redirects back to `/success`
-1. **FRONTEND:** On load, triggers a `syncAfterSuccess` function on backend (hit an API for redundancy)
+1. **FRONTEND:** On load, triggers a `handleSubscriptionSuccessHandler` function on backend (hit an API for redundancy)
 1. **BACKEND:** Uses `userId` to get Stripe `customerId` from KV
 1. **BACKEND:** Calls `syncStripeSubscription` with `customerId`
 1. **FRONTEND:** After sync succeeds, redirects user to wherever you want them to be :)
